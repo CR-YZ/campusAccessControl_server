@@ -234,9 +234,9 @@ cd admin_ui
 npm install
 npm run serve  # http://localhost:8080
 
-# 微信小程序（需微信开发者工具）
-cd uniapp_ordinaryUsers_ui
-# 使用HBuilderX导入项目，运行到微信小程序
+# 微信小程序（需微信开发者工具）2选一
+## 微信开发者工具导入ordinaryUsers_ui运行项目
+## 或者使用HBuilderX导入uniapp_ordinaryUsers_ui项目，运行到微信小程序
 ```
 
 ---
