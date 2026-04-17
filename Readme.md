@@ -1,4 +1,4 @@
-# 🚪 智能校园门禁管理系统
+# <a id="top"></a> 🚪 智能校园门禁管理系统
 > Campus Access Control System Based on Face Recognition
 
 ![Vue](https://img.shields.io/badge/Vue-3.2-green)
@@ -12,28 +12,29 @@
 
 ---
 
-## 📋 目录
+## <a id="toc"></a> 📋 目录
 
-- [项目简介](#-项目简介)
-- [系统预览](#preview)
-- [功能模块](#-功能模块)
-- [技术栈](#%EF%B8%8F-技术栈)
-- [系统架构](#-系统架构)
-- [数据库设计](#-数据库设计)
-- [快速开始](#-快速开始)
-- [接口文档](#-接口文档)
-- [部署指南](#-部署指南)
-- [项目结构](#-项目结构)
-- [开发规范](#-开发规范)
-- [参考文献](#-参考文献)
+- [📖 项目简介](#intro)
+- [🖼️ 系统预览](#preview)
+- [🧩 功能模块](#features)
+- [🛠️ 技术栈](#techstack)
+- [🏗️ 系统架构](#architecture)
+- [🗄️ 数据库设计](#database)
+- [🚀 快速开始](#quickstart)
+- [📡 接口文档](#api)
+- [🐳 部署指南](#deploy)
+- [📁 项目结构](#structure)
+- [📏 开发规范](#dev-spec)
+- [📚 参考文献 & 致谢](#references)
+- [📬 联系作者](#contact)
 
 ---
 
-## 📖 项目简介
+## <a id="intro"></a> 📖 项目简介
 
 本系统是为智慧校园场景设计的**人脸识别门禁管理系统**，采用前后端分离架构，集成微信小程序、Web管理后台、人脸识别服务三大核心模块。系统支持学生人脸录入、通行申请、教师审批、实时人脸验证等完整业务流程，旨在提升校园安全管理的智能化水平。
 
-### 🔑 核心特性
+### <a id="core-features"></a> 🔑 核心特性
 - ✅ 微信小程序端：便捷的人脸采集与通行申请
 - ✅ 教师管理端：申请审批、班级权限管理
 - ✅ Web验证端：摄像头实时人脸识别通行
@@ -42,7 +43,7 @@
 
 ---
 
-## <a id="preview"></a>🖼️ 系统预览
+## <a id="preview"></a> 🖼️ 系统预览
 
 ### Web 管理后台
 ![管理员后台动图](./images/Video_2024-03-08_200357.gif "管理员后台演示")
@@ -57,9 +58,9 @@
 
 ---
 
-## 🧩 功能模块
+## <a id="features"></a> 🧩 功能模块
 
-### 👤 学生端（微信小程序）
+### <a id="student"></a> 👤 学生端（微信小程序）
 | 功能 | 说明 |
 |------|------|
 | 🔐 用户登录 | 学号+密码认证，支持记住登录状态 |
@@ -68,7 +69,7 @@
 | 📊 申请记录 | 查看历史申请状态（待审/通过/拒绝/撤销） |
 | 👤 个人信息 | 修改密码、查看绑定班级、更新头像 |
 
-### 👨‍🏫 教师端（微信小程序 + Web）
+### <a id="teacher"></a> 👨‍🏫 教师端（微信小程序 + Web）
 | 功能 | 说明 |
 |------|------|
 | 🔐 教师登录 | 工号+密码认证，权限隔离 |
@@ -76,14 +77,14 @@
 | 👥 班级管理 | 查看班级学生列表、导出名单 |
 | 📈 通行统计 | 按日期/班级查看通行记录统计 |
 
-### 🌐 Web验证端（门禁终端）
+### <a id="web-terminal"></a> 🌐 Web验证端（门禁终端）
 | 功能 | 说明 |
 |------|------|
 | 📷 实时识别 | 调用摄像头捕获人脸，与数据库特征比对 |
 | ✅ 通行反馈 | 识别成功显示姓名+班级+通行权限，失败提示原因 |
 | 📝 通行日志 | 自动记录每次验证结果（时间、人员、结果） |
 
-### ⚙️ 后台管理系统（Web）
+### <a id="admin"></a> ⚙️ 后台管理系统（Web）
 | 功能 | 说明 |
 |------|------|
 | 👥 用户管理 | 管理员/教师/学生账号的增删改查 |
@@ -93,7 +94,7 @@
 
 ---
 
-## 🛠️ 技术栈
+## <a id="techstack"></a> 🛠️ 技术栈
 
 ### 前端
 | 模块 | 技术 | 版本 | 说明 |
@@ -118,7 +119,7 @@
 
 ---
 
-## 🏗️ 系统架构
+## <a id="architecture"></a> 🏗️ 系统架构
 
 ```
 ┌─────────────────────────────────────────┐
@@ -155,7 +156,7 @@
 
 ---
 
-## 🗄️ 数据库设计
+## <a id="database"></a> 🗄️ 数据库设计
 
 ### 核心表结构
 
@@ -185,7 +186,7 @@ application_logs ── students (N:1)
 
 ---
 
-## 🚀 快速开始
+## <a id="quickstart"></a> 🚀 快速开始
 
 ### 环境要求
 ```bash
@@ -203,7 +204,6 @@ cd campusAccessControl_server
 
 # 2. 配置环境变量（可选）
 cp .env.example .env
-# 修改 .env 中的数据库密码、端口等配置
 
 # 3. 启动服务
 docker-compose up -d
@@ -230,7 +230,6 @@ pip install -r requirements.txt
 python app.py  # 启动端口: 5000
 
 # ========== 前端项目 ==========
-# 管理后台
 cd admin_ui
 npm install
 npm run serve  # http://localhost:8080
@@ -242,7 +241,7 @@ cd uniapp_ordinaryUsers_ui
 
 ---
 
-## 📡 接口文档
+## <a id="api"></a> 📡 接口文档
 
 ### 认证相关
 | 方法 | 路径 | 说明 | 参数 |
@@ -269,7 +268,7 @@ cd uniapp_ordinaryUsers_ui
 
 ---
 
-## 🐳 部署指南
+## <a id="deploy"></a> 🐳 部署指南
 
 ### 生产环境配置建议
 ```yaml
@@ -279,7 +278,7 @@ services:
   mysql:
     image: mysql:8.0
     environment:
-      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}  # 使用环境变量
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
     volumes:
       - ./data/mysql:/var/lib/mysql
       - ./conf/mysql.cnf:/etc/mysql/conf.d/custom.cnf
@@ -290,16 +289,16 @@ services:
       - NODE_ENV=production
       - JWT_SECRET=${JWT_SECRET}
     deploy:
-      replicas: 2  # 多实例部署
+      replicas: 2
   
   nginx:
     image: nginx:alpine
     ports:
       - "80:80"
-      - "443:443"  # HTTPS
+      - "443:443"
     volumes:
       - ./conf/nginx.conf:/etc/nginx/nginx.conf
-      - ./ssl:/etc/nginx/ssl  # SSL证书
+      - ./ssl:/etc/nginx/ssl
 ```
 
 ### 安全加固建议
@@ -311,14 +310,14 @@ services:
 
 ---
 
-## 📁 项目结构
+## <a id="structure"></a> 📁 项目结构
 
 ```
 campusAccessControl_server/
 ├── admin_server/              # Node.js 后端服务
 │   ├── config/               # 配置文件 (db, jwt)
 │   ├── controller/           # 业务逻辑层
-│   ├── router/               # 路由定义 (admin.js, user.js)
+│   ├── router/               # 路由定义
 │   ├── middleware/           # 中间件 (auth, validate)
 │   ├── utils/                # 工具函数
 │   ├── main.js               # 入口文件
@@ -347,6 +346,7 @@ campusAccessControl_server/
 │   └── camp.sql              # 完整建表+初始化数据
 │
 ├── docs/                     # 文档目录
+│   ├── images/               # 项目截图
 │   ├── api.json              # Apifox接口定义
 │   └── deployment.md         # 详细部署手册
 │
@@ -357,7 +357,7 @@ campusAccessControl_server/
 
 ---
 
-## 📏 开发规范
+## <a id="dev-spec"></a> 📏 开发规范
 
 ### Git提交规范
 ```bash
@@ -386,7 +386,7 @@ hotfix/xxx    # 紧急修复分支
 
 ---
 
-## 📚 参考文献
+## <a id="references"></a> 📚 参考文献 & 致谢
 
 ### 技术参考
 1. 微信小程序开发文档: https://developers.weixin.qq.com/miniprogram/dev/framework/
@@ -399,9 +399,12 @@ hotfix/xxx    # 紧急修复分支
 - [element-plus](https://element-plus.org/) - Vue3组件库
 - [uni-app](https://uniapp.dcloud.io/) - 跨端开发框架
 
+### 特别感谢
+> 感谢导师的悉心指导，以及实验室同学在需求调研与测试阶段提供的宝贵建议！
+
 ---
 
-## 📬 联系作者
+## <a id="contact"></a> 📬 联系作者
 
 - 👤 作者：[CR-YZ]
 - 📧 邮箱：[xiaoraotest@outlook.com]
