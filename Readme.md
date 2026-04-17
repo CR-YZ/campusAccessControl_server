@@ -337,7 +337,14 @@ campusAccessControl_server/
 │   │   └── router/           # 路由配置
 │   └── vite.config.js
 │
-├── uniapp_ordinaryUsers_ui/  # 微信小程序 (uni-app)
+├── ordinaryUsers_ui/         # 微信小程序 (原生)
+│   ├── pages/                # 页面文件
+│   ├── components/           # 自定义组件
+│   ├── utils/
+│   │   ├── api/              # 接口封装
+│   │   ├── md5/              # md5加密工具
+|    
+├── uniapp_ordinaryUsers_ui/  # 微信小程序 (uni-app 未完善)
 │   ├── pages/                # 页面文件
 │   ├── api/                  # 请求封装
 │   └── manifest.json         # 小程序配置
